@@ -1,0 +1,10 @@
+extend admission 
+
+block admission 
+    .admission-report.align-center
+        .report-container 
+            h1=admission.user.name 
+            p admission number 
+                br
+                span=admission.admissionNo
+            

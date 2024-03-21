@@ -1,0 +1,11 @@
+extend admin 
+
+block adminContent 
+    h1 this is admin admission 
+    .admin-admission-container 
+        each student in admission
+            .admin-admission-box 
+                //- h3=student.name
+                //- span=student.phone
+                //- span=student.gender 
+                span=student

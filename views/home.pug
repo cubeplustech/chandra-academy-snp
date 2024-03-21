@@ -1,0 +1,75 @@
+extend base
+
+block content 
+    section.home.align-center
+        .main-home.align-center 
+            h1.home-heading Best CBSE & CHSE Coaching Institute in Western Odisha
+            a(href="#contact") 
+                button.btn.enroll-btn enroll now
+        .main-facility-container   
+            .main-facility.align-center 
+                img(src="/./images/hostel.svg", alt="")
+                .main-facility-name 
+                    h2 hostel facility 
+                    a(href="/fecility") learn more > 
+            
+            .main-facility.align-center 
+                img(src="/./images/workshop.svg", alt="")
+                .main-facility-name 
+                    h2 smart classroom 
+                    a(href="/fecility") learn more > 
+            
+            .main-facility.align-center 
+                img(src="/./images/bus.svg", alt="")
+                .main-facility-name 
+                    h2 transport facility
+                    a(href="/fecility") learn more > 
+    section.about-section 
+        .about-container 
+            .about-img
+                .about-img-box.align-center
+                    img(src="/./images/img3.jpg", alt="img")
+            .about-main 
+                .about-children 
+                    h2 give your child the best start 
+                    p Our education is delivered in line with the National Curriculum.This ensures our teaching directly benefitd your child's education from class 6th to 12th(+2 Science).Our Teaching is carried out in fully equipped and supportive environments. 
+                .about-info.align-center 
+                    img.about-logo(src="/./images/logo.png", alt="logo")
+                    p.about-para “Chandra Academy  Coaching Centre, established in 2007, has been fostering academic and personal growth for over 15 years. Embark on a journey of learning and self-improvement with us.”
+        .about-coaching 
+            h2.sub-heading why chandra academy?
+            ul.about-list 
+                li well furnised hostel 
+                li A/C smart classrooms 
+                li guided study programme 
+                li online recorded class 
+                li teaching under CCTV 
+                li Chapterwise Test
+                li provide study material 
+                li affodable fees structure
+                li experienced subject teachers 
+                li well maintain labs and library
+                li free transport for summer classes 
+                li special for OAV.JNv,Ekalavya School
+    section.contact.align-center#contact 
+        .contact-info 
+            .logo-name CHANDRA 
+                br
+                span academy
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem officiis quam numquam aspernatur. Laudantium odit harum, soluta qui atque nihil iure minus maxime?
+        .contact-form 
+            .login-container 
+                h2.login-heading enroll
+                form.login-form#enroll(action="/enroll",method="POST") 
+                    label(for="enroll-name")
+                        p.useremail name 
+                        input#enroll-name(type="text", name="enroll-name",placeholder="Enter your name")
+                    label(for="enroll-email")
+                        p.useremail email 
+                        input#enroll-email(type="text", name="enroll-email",placeholder="Enter your email")
+                    label(for="phone-number") 
+                        p.userpassword phone
+                        input#phone-number(type="number", name="phone-number",placeholder="Enter your phone number")
+                    button.btn(type="submit") enroll 
+               
+                    

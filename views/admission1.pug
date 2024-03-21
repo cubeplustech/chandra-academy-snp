@@ -1,0 +1,44 @@
+extend admission 
+
+block admission 
+    .admission-progress 
+        .progress-bar 
+            span.admission-active 
+            span
+            span
+        .progress-item 
+            a(href="/admission/:admissionId/page1").admission-active step 1
+            a(href="/admission/:admissionId/page2") step 2
+            a(href="/admission/:admissionId/page3") stap 3
+    .admission-form.align-center
+            form#admission1.align-center
+                .input-box 
+                    label(for="admission-name") name:- 
+                    input#admission-name(type="text", name="admission-name")
+                .input-box 
+                    label(for="class") admitted into class :- 
+                    select#studentclass(name="class") 
+                        option(value="#") select your class
+                        option(value="6") 6th
+                        option(value="7") 7th
+                        option(value="8") 8th
+                        option(value="9") 9th
+                        option(value="10") 10th
+                        option(value="11") +2 first year
+                        option(value="12") +2 second year
+                .input-box 
+                    label(for="dob") date of birth:-
+                    input#admission-dob(type="date", name="dob")
+                .input-box 
+                    label(for="gender") Gender:-
+                    select#admission-gender(name="gender") 
+                        option(value="#") select your gender
+                        option(value="male") male
+                        option(value="female") female
+                .input-box 
+                    label(for="adhar") adhar number:-
+                    input#admission-adhar(type="number", name="adhar")
+                .input-box 
+                    label(for="phoneNo") phone numbar:- 
+                    input#admission-phoneNo(type="number", name="phoneNo")
+                button.btn(type="submmit") save & continue

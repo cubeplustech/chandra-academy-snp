@@ -1,0 +1,44 @@
+extend admission 
+
+block admission 
+    .admission-progress 
+        .progress-bar 
+            span
+            span
+            span.admission-active 
+        .progress-item 
+            a(href="/admission/:admissionId/page1") step 1
+            a(href="/admission/:admissionId/page2") step 2
+            a(href="/admission/:admissionId/page3").admission-active stap 3
+    .admission-form.align-center
+            form#admission3.align-center
+                .input-box 
+                    label(for="admission-village") village:- 
+                    input#admission-village(type="text", name="admission-village")
+                
+                .input-box 
+                    label(for="postOffice") post Office:-
+                    input#admission-postOffice(type="text", name="postOffice")
+                .input-box 
+                    label(for="policeStation") police Station:-
+                    input#admission-policeStation(type="text", name="policeStation")
+                .input-box 
+                    label(for="pin") pin:-
+                    input#admission-pin(type="number", name="pin")
+                .input-box 
+                    label(for="dist") dist:-
+                    input#admission-dist(type="text", name="dist")
+                .input-box 
+                    label(for="stay") stay:-
+                        select#admission-stay(name="stay") 
+                            option(value="#") select your stay 
+                            option(value="hostel") hostel
+                            option(value="day scholar") day scholar
+                .input-box 
+                    label(for="transport") transport:-
+                        select#admission-transport(name="transport") 
+                            option(value="#") select your transport
+                            option(value="coaching") coaching
+                            option(value="school") school
+                            option(value="both") both
+                button.btn(type="submmit") finish

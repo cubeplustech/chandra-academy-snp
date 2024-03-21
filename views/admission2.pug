@@ -1,0 +1,32 @@
+extend admission 
+
+block admission 
+    .admission-progress 
+        .progress-bar 
+            span
+            span.admission-active 
+            span
+        .progress-item 
+            a(href="/admission/:admissionId/page1") step 1
+            a(href="/admission/:admissionId/page2").admission-active step 2
+            a(href="/admission/:admissionId/page3") stap 3
+    .admission-form.align-center
+            form#admission2.align-center
+                .input-box 
+                    label(for="admission-nationallity") nationallity:- 
+                    input#admission-nationallity(type="text", name="admission-nationallity")
+                
+                .input-box 
+                    label(for="religion") religion:-
+                    input#admission-religion(type="text", name="religion")
+                .input-box 
+                    label(for="catagory") catagory:-
+                    input#admission-catagory(type="text", name="catagory")
+                .input-box 
+                    label(for="fatherName") fatherName:-
+                    input#admission-fatherName(type="text", name="fatherName")
+                .input-box 
+                    label(for="motherName") motherName:-
+                    input#admission-motherName(type="text", name="motherName")
+                
+                button.btn(type="submmit") save & continue
