@@ -12,7 +12,7 @@ const signToken = (id) => {
 
 exports.signup = catchAsync(async (req, res, next) => {
   const user = await User.create(req.body);
-  const url = "http://localhost:4000/";
+  const url = "https://chandraacademysonepur.com/";
   await new sendEmail(user, url).sendWelcome();
   const token = signToken(user.id);
   res.cookie("token", token);
