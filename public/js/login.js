@@ -21,7 +21,7 @@ exports.login = async (email, password) => {
     const response = await axios({
       method: "POST",
       //   url: `${req.protocol}://${req.get("host")}/login`,
-      url: "http://localhost:4000/login",
+      url: "https://chandraacademysonepur.com/login",
       data: {
         email,
         password,
@@ -46,7 +46,7 @@ exports.signup = async (name, email, password, confirmPassword) => {
   try {
     const response = await axios({
       method: "POST",
-      url: "http://localhost:4000/signup",
+      url: "https://chandraacademysonepur.com/signup",
       data: {
         name,
         email,
@@ -73,7 +73,7 @@ exports.forgot = async (email) => {
   try {
     const response = await axios({
       method: "POST",
-      url: "http://localhost:4000/forgot",
+      url: "https://chandraacademysonepur.com/forgot",
       data: {
         email,
       },
@@ -99,7 +99,7 @@ exports.reset = async (password, confirmPassword) => {
   try {
     const response = await axios({
       method: "patch",
-      url: `http://localhost:4000/resetPassword/${resetToken}`,
+      url: `https://chandraacademysonepur.com/resetPassword/${resetToken}`,
       data: {
         password,
         confirmPassword,
@@ -124,7 +124,7 @@ exports.buying = async (productId) => {
 
   try {
     const resp = await axios(
-      `http://localhost:4000/product/checkout/${productId}`
+      `https://chandraacademysonepur.com/product/checkout/${productId}`
     );
     console.log(resp.data);
     if (resp.data.status === "success") {
@@ -180,7 +180,7 @@ exports.enroll = async (name, email, phone) => {
   try {
     const response = await axios({
       method: "POST",
-      url: "http://localhost:4000/enroll",
+      url: "https://chandraacademysonepur.com/enroll",
       data: {
         name,
         email,
@@ -205,7 +205,7 @@ exports.admission = async () => {
   try {
     const response = await axios({
       method: "POST",
-      url: "http://localhost:4000/admission",
+      url: "https://chandraacademysonepur.com/admission",
 
       httpOnly: true,
     });
@@ -229,7 +229,7 @@ exports.admission1 = async (name, phone, studentclass, dob, gender, adhar) => {
   try {
     const response = await axios({
       method: "POST",
-      url: `http://localhost:4000/admission/${admissionId}/page1`,
+      url: `https://chandraacademysonepur.com/admission/${admissionId}/page1`,
       data: {
         name,
         phone,
@@ -266,7 +266,7 @@ exports.admission2 = async (
   try {
     const response = await axios({
       method: "POST",
-      url: `http://localhost:4000/admission/${admissionId}/page2`,
+      url: `https://chandraacademysonepur.com/admission/${admissionId}/page2`,
       data: {
         nationallity,
         religion,
@@ -303,7 +303,7 @@ exports.admission3 = async (
   try {
     const response = await axios({
       method: "POST",
-      url: `http://localhost:4000/admission/${admissionId}/page3`,
+      url: `https://chandraacademysonepur.com/admission/${admissionId}/page3`,
       data: {
         village,
         postOffice,
