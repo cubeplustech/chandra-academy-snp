@@ -392,7 +392,7 @@ header {
 /* contact */
 .contact {
     margin-top: 2rem;
-    height: 100vh;
+    height: auto;
     background-image: linear-gradient(#e8c20257, #e8c2026a), url("../images/contactus_11zon.jpg");
     background-size: cover;
     background-position: 50% 50%;
