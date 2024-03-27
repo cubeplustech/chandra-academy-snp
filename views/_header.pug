@@ -6,19 +6,22 @@ header.header
                 br  
                 span academy 
         .account-btn-head
-            if user
-                a(href="/login" onclick="togglefun()")
-                    .login.align-center
-                        img(src="/./images/user.svg", alt="")
-                        span=user.name.split(" ")[0]
-            else 
-                .accoutn-btn.align-center
+            .login-logout.align-center
+                if user
                     a(href="/login" onclick="togglefun()")
-                        .login
-                            span LOGIN
-                    a(href="/signup" onclick="togglefun()")
-                        .login
-                            span REGISTER
+                        .login.align-center
+                            img(src="/./images/user.svg", alt="")
+                            span=user.name.split(" ")[0]
+                    .logout.align-center#logout-btn
+                        img(src="/./images/logout.svg", alt="")
+                else 
+                    .accoutn-btn.align-center
+                        a(href="/login" onclick="togglefun()")
+                            .login
+                                span LOGIN
+                        a(href="/signup" onclick="togglefun()")
+                            .login
+                                span REGISTER
 
         .toggle#toggle(onclick="togglefun()")
             span.first
@@ -28,17 +31,20 @@ header.header
         ul.navbar 
             li: a(href="/" onclick="togglefun()") home
             li: a(href="/about" onclick="togglefun()") about
-            //- li: a(href="/admission" onclick="togglefun()") admission
+            li: a(href="/admission" onclick="togglefun()") admission
             li: a(href="/teachers" onclick="togglefun()") staff
             li: a(href="/results" onclick="togglefun()") results
             li: a(href="/fecility" onclick="togglefun()") facilities
             li: a(href="/#contact" onclick="togglefun()") enroll
         .navbar-account
+            
             if user
-                a(href="/login" onclick="togglefun()")
-                    .login.align-center
+                .login.align-center
+                    a(href="/login" onclick="togglefun()")
                         img(src="/./images/user.svg", alt="")
                         span=user.name.split(" ")[0]
+                    .logout.align-center.logout-btn
+                        img(src="/./images/logout.svg", alt="")
             else 
                 a(href="/login" onclick="togglefun()")
                     .login
