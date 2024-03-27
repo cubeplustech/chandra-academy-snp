@@ -2,18 +2,30 @@ const express = require("express");
 const Router = express.Router();
 const viewController = require("../controller/viewController");
 const authContoller = require("../controller/authController");
+const admissionContoller = require("../controller/admissionController");
 
 Router.use(authContoller.isLogin);
 
 Router.get("/", viewController.home);
 Router.get("/about", viewController.about);
 Router.get("/contact", viewController.contact);
-Router.get("/admission", viewController.admission);
+Router.get(
+  "/admission",
+  admissionContoller.checkadmission,
+  viewController.admission
+);
 Router.get(
   "/admission/:admissionId/page1",
   authContoller.protect,
   viewController.admission1
 );
+
+Router.get(
+  "/admission/:admissionId/preview",
+  authContoller.protect,
+  viewController.getOneAdmission
+);
+
 Router.get(
   "/admission/:admissionId/page2",
   authContoller.protect,
