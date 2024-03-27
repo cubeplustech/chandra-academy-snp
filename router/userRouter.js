@@ -8,6 +8,7 @@ Router.use(authController.isLogin);
 Router.route("/signUp").post(authController.signup);
 Router.route("/login").post(authController.login);
 Router.route("/forgot").post(authController.forgotpass);
+Router.route("/logout").get(authController.logout);
 Router.route("/resetPassword/:resetToken").patch(authController.resetPassword);
 Router.route("/user").get(
   authController.protect,
