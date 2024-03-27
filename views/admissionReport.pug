@@ -3,8 +3,58 @@ extend admission
 block admission 
     .admission-report.align-center
         .report-container 
-            h1=admission.user.name 
-            p admission number 
-                br
-                span=admission.admissionNo
-            
+            h2 Admission report
+            .report-box 
+                .report-item 
+                    span Name : 
+                    span.report-name=admissionrpt.admission1[0].name
+                .report-item 
+                    span Class : 
+                    span=admissionrpt.admission1[0].studentclass
+                .report-item 
+                    span Dob : 
+                    span=admissionrpt.admission1[0].dob.toLocaleDateString()
+                .report-item 
+                    span Adhar no : 
+                    span=admissionrpt.admission1[0].adhar
+                .report-item 
+                    span Phone no : 
+                    span=admissionrpt.admission1[0].phone
+                    
+            .report-box 
+                .report-item 
+                    span Nationallity : 
+                    span=admissionrpt.admission2[0].nationallity
+                .report-item 
+                    span Religion : 
+                    span=admissionrpt.admission2[0].religion
+                .report-item 
+                    span Catagory : 
+                    span=admissionrpt.admission2[0].catagory
+                .report-item 
+                    span Father name : 
+                    span.report-name=admissionrpt.admission2[0].fatherName
+                .report-item 
+                    span Mother name : 
+                    span.report-name=admissionrpt.admission2[0].motherName
+                    
+            .report-box 
+                .report-item 
+                    span Village : 
+                    span=admissionrpt.admission3[0].village
+                .report-item 
+                    span Post Office : 
+                    span=admissionrpt.admission3[0].postOffice
+                .report-item 
+                    span PIN : 
+                    span=admissionrpt.admission3[0].pin
+                .report-item 
+                    span Dist : 
+                    span=admissionrpt.admission3[0].dist
+                .report-item 
+                    span Transport : 
+                    span=admissionrpt.admission3[0].transport
+                .report-item 
+                    span Stay : 
+                    span=admissionrpt.admission3[0].stay
+                    
